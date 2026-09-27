@@ -441,7 +441,7 @@ document.getElementById('btn-oracle').onclick = async ()=>{
   const state = `전쟁 중 성채 통과 판단. 상황: ${st.situation} 딜레마: ${st.dilemma} `+
     `현재 병력 ${S.troops}, 식량 ${S.supplies}, 사기 ${S.morale}, 명예 ${S.honor}. 목표: 군대를 최대한 살려 본국으로 귀환.`;
   try{
-    const res = await fetch('https://jevtypesafeai.com/api/v1/decide',{
+    const res = await fetch('https://api.typesafe.ai/v1/systemone',{
       method:'POST',
       headers:{'Authorization':'Bearer '+key,'Content-Type':'application/json'},
       body: JSON.stringify({
